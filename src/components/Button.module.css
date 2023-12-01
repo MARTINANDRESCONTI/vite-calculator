@@ -1,0 +1,26 @@
+.button {
+  font-size: 30px;
+  font-weight: 700;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--appVeige);
+  border: solid rgba(128, 128, 128, 0.206) 2px;
+  cursor: pointer;
+  user-select: none;
+  
+}
+
+.operator {
+  background-color: var(--appBrown);
+}
+
+.bigger {
+  width: 200px;  
+  color: var(--appRed);
+}
+
+.button:hover {
+  opacity: 0.6;
+}

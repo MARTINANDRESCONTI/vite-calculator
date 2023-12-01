@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import style from './App.module.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Button from './components/Button'
+import icon from './assets/martinIcon.svg'
 
+export default function App() {
   return (
-    <>
+    <div className={style.appContainer}>
+      <div className={style.titleContainer}>
+        <h1>Calculator</h1>
+        <img src={icon} />
+      </div>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <div className={style.output}>output</div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className={style.calbody}>       
+        <div className={style.row}>
+          <Button>AC</Button>
+          <Button className={style.delete}>DEL</Button>
+          <Button>%</Button>
+        </div>
+        <div className={style.row}>
+          <Button>1</Button>
+          <Button>2</Button>
+          <Button>3</Button>
+          <Button>*</Button>
+        </div>
+        <div className={style.row}>
+          <Button>4</Button>
+          <Button>5</Button>
+          <Button>6</Button>
+          <Button>+</Button>
+        </div>
+        <div className={style.row}>
+          <Button>7</Button>
+          <Button>8</Button>
+          <Button>9</Button>
+          <Button>-</Button>
+        </div>
+        <div className={style.row}>
+          <Button>.</Button>
+          <Button>0</Button>
+          <Button className={style.equal}>=</Button>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
-
-export default App

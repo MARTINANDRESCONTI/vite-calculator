@@ -1,0 +1,56 @@
+.appContainer {
+  height: 90vh;
+  width: 400px;
+ 
+  
+}
+
+.titleContainer {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.titleContainer > img {
+  background-color: white;
+  border-radius: 50px;
+}
+
+.output {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  font-size: 25px;
+  font-weight: 800;
+  overflow-wrap: break-word;
+  min-height: 150px;
+  color: white;
+  padding: 20px;
+  opacity: 0.9;
+  background-color: gray;
+
+  
+}
+
+.calbody {
+  height: 70%;
+  
+}
+
+.row {
+  height: 70px;
+  display: flex;
+  
+}
+
+button {
+  width: 100px;
+}
+
+.equal, .delete {
+  width: 200px;
+}
