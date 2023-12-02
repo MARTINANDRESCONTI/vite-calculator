@@ -1,10 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from './App.module.css'
 
 import Button from './components/Button'
 import icon from './assets/martinIcon.svg'
+import Input from './components/Input'
+import { evaluate } from 'mathjs'
+
+
 
 export default function App() {
+
+  const [input, setInput] = useState('')
+
+  const inputHandler = inputValue =>{
+    setInput(input + inputValue) 
+  }
+
+  function acHandler(){   
+    setInput(input.split('').pop().join())
+  }
+
+  const calculate = () => {
+    setInput(evaluate(input))
+  }
+
   return (
     <div className={style.appContainer}>
       <div className={style.titleContainer}>
@@ -12,36 +31,36 @@ export default function App() {
         <img src={icon} />
       </div>
       <div>
-        <div className={style.output}>output</div>
+        <Input input={input} />
       </div>
       <div className={style.calbody}>       
         <div className={style.row}>
-          <Button>AC</Button>
-          <Button className={style.delete}>DEL</Button>
-          <Button>%</Button>
+          <span className={style.ac} onClick={acHandler}>AC</span>
+          <span className={style.delete} onClick={()=>setInput('')}>DEL</span>
+          <Button inputHandler={inputHandler}>/</Button>
         </div>
         <div className={style.row}>
-          <Button>1</Button>
-          <Button>2</Button>
-          <Button>3</Button>
-          <Button>*</Button>
+          <Button inputHandler={inputHandler}>1</Button>
+          <Button inputHandler={inputHandler}>2</Button>
+          <Button inputHandler={inputHandler}>3</Button>
+          <Button inputHandler={inputHandler}>*</Button>
         </div>
         <div className={style.row}>
-          <Button>4</Button>
-          <Button>5</Button>
-          <Button>6</Button>
-          <Button>+</Button>
+          <Button inputHandler={inputHandler}>4</Button>
+          <Button inputHandler={inputHandler}>5</Button>
+          <Button inputHandler={inputHandler}>6</Button>
+          <Button inputHandler={inputHandler}>+</Button>
         </div>
         <div className={style.row}>
-          <Button>7</Button>
-          <Button>8</Button>
-          <Button>9</Button>
-          <Button>-</Button>
+          <Button inputHandler={inputHandler}>7</Button>
+          <Button inputHandler={inputHandler}>8</Button>
+          <Button inputHandler={inputHandler}>9</Button>
+          <Button inputHandler={inputHandler}>-</Button>
         </div>
         <div className={style.row}>
-          <Button>.</Button>
-          <Button>0</Button>
-          <Button className={style.equal}>=</Button>
+          <Button inputHandler={inputHandler}>.</Button>
+          <Button inputHandler={inputHandler}>0</Button>
+          <span className={style.equal} onClick={calculate}>=</span>
         </div>
       </div>
     </div>

@@ -1,0 +1,16 @@
+.inputContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  font-size: 25px;
+  font-weight: 800;
+  overflow-wrap: break-word;
+  text-wrap: wrap;
+  min-height: 150px;
+  color: white;
+  padding: 20px;
+  opacity: 0.9;
+  background-color: rgba(3, 3, 3, 0.718);  
+  overflow: hidden;
+ 
+}

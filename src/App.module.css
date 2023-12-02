@@ -10,30 +10,17 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 5px;
   margin: 10px;
   font-weight: bold;
 }
 
 .titleContainer > img {
+  height: 30px;
+  width: auto;
   background-color: white;
   border-radius: 50px;
-}
-
-.output {
-  display: flex;
-  justify-content: flex-end;
-  align-items: end;
-  font-size: 25px;
-  font-weight: 800;
-  overflow-wrap: break-word;
-  min-height: 150px;
-  color: white;
-  padding: 20px;
-  opacity: 0.9;
-  background-color: gray;
-
-  
 }
 
 .calbody {
@@ -53,4 +40,34 @@ button {
 
 .equal, .delete {
   width: 200px;
+}
+
+.delete, 
+.ac,
+.equal {  
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--appVeige);
+  border: solid rgba(128, 128, 128, 0.206) 2px;
+  cursor: pointer;
+  user-select: none;  
+}
+
+.ac {
+  width: 100px;
+}
+
+.delete:hover {
+  opacity: 0.6;
+}
+
+.ac:hover {
+  opacity: 0.6;
+}
+
+.equal:hover {
+  opacity: 0.6;
 }
