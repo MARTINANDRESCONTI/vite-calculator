@@ -7,21 +7,35 @@ import Input from './components/Input'
 import { evaluate } from 'mathjs'
 
 
-
 export default function App() {
 
   const [input, setInput] = useState('')
 
   const inputHandler = inputValue =>{
-    setInput(input + inputValue) 
+    if (isNaN(inputValue) && isNaN(input[input.length -1])){
+      setInput(input)
+    }
+  
+    else if ((inputValue === '.') && input.split(/[+*\/-]/g).forEach((e)=> e.includes('.')) ){
+      setInput(input)
+    }
+
+    else if ((inputValue === '0') && input.split(/[+*\/-]/g).forEach((e)=> e[0] === '0') ){
+      setInput(input)
+    }
+    
+    else{
+      setInput(input + inputValue) 
+    }
   }
 
-  function acHandler(){   
-    setInput(input.split('').pop().join())
+  function acHandler(){      
+    setInput(input.slice(0, -1))
   }
 
   const calculate = () => {
-    setInput(evaluate(input))
+    const value = evaluate(input)
+    setInput(value.toString())
   }
 
   return (
