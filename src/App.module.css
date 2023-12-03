@@ -24,7 +24,7 @@
 }
 
 .calbody {
-  height: 70%;
+  height: 60%;
   
 }
 
@@ -70,4 +70,13 @@ button {
 
 .equal:hover {
   opacity: 0.6;
+}
+
+.git{
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  color: var(--appRed);    
 }
