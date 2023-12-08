@@ -60,14 +60,8 @@ button {
   width: 100px;
 }
 
-.delete:hover {
-  opacity: 0.6;
-}
-
-.ac:hover {
-  opacity: 0.6;
-}
-
+.delete:hover,
+.ac:hover,
 .equal:hover {
   opacity: 0.6;
 }

@@ -5,7 +5,6 @@ import Button from './components/Button'
 import icon from './assets/martinIcon.svg'
 import Input from './components/Input'
 import { evaluate } from 'mathjs'
-import { Link } from 'react-router-dom'
 import { FaGithubSquare } from "react-icons/fa";
 
 
@@ -79,7 +78,7 @@ export default function App() {
           <span className={style.equal} onClick={calculate}>=</span>
         </div>
       </div>
-      <a href='https://github.com/MARTINANDRESCONTI/vite-calculator'><FaGithubSquare className={style.git}/></a>
+      <a className={style.git} href='https://github.com/MARTINANDRESCONTI/vite-calculator'><FaGithubSquare className={style.git}/></a>
     </div>
   )
 }
