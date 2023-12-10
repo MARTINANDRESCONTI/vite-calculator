@@ -74,3 +74,11 @@ button {
   bottom: 30px;
   color: var(--appRed);    
 }
+
+@media screen and (max-width: 600px) {
+  .git{  
+  right: 10px;
+  bottom: 10px;
+}
+
+}
