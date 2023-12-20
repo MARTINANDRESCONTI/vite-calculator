@@ -70,15 +70,9 @@ button {
   height: 40px;
   width: 40px;
   position: absolute;
-  right: 30px;
-  bottom: 30px;
+  right: 10px;
+  bottom: 10px;
   color: var(--appRed);    
 }
 
-@media screen and (max-width: 600px) {
-  .git{  
-  right: 10px;
-  bottom: 10px;
-}
 
-}
