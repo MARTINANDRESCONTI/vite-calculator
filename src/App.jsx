@@ -5,7 +5,7 @@ import Button from './components/Button'
 import icon from './assets/martinIcon.svg'
 import Input from './components/Input'
 import { evaluate } from 'mathjs'
-import { FaGithubSquare } from "react-icons/fa";
+import Footer from './components/Footer'
 
 
 export default function App() {
@@ -40,45 +40,49 @@ export default function App() {
   }
 
   return (
-    <div className={style.appContainer}>
-      <div className={style.titleContainer}>
-        <h1>Calculator</h1>
-        <img src={icon} />
+    <div className={style.container}>
+      <div className={style.appContainer}>
+        <div className={style.titleContainer}>
+          <h1>Calculator</h1>
+          <a className={style.icon} href='https://martin-conti-portfolio.vercel.app/' target='_blank'>
+            <img src={icon} />                 
+          </a>
+        </div>
+        <div>
+          <Input input={input} />
+        </div>
+        <div className={style.calbody}>       
+          <div className={style.row}>
+            <span className={style.ac} onClick={acHandler}>AC</span>
+            <span className={style.delete} onClick={()=>setInput('')}>DEL</span>
+            <Button inputHandler={inputHandler}>/</Button>
+          </div>
+          <div className={style.row}>
+            <Button inputHandler={inputHandler}>1</Button>
+            <Button inputHandler={inputHandler}>2</Button>
+            <Button inputHandler={inputHandler}>3</Button>
+            <Button inputHandler={inputHandler}>*</Button>
+          </div>
+          <div className={style.row}>
+            <Button inputHandler={inputHandler}>4</Button>
+            <Button inputHandler={inputHandler}>5</Button>
+            <Button inputHandler={inputHandler}>6</Button>
+            <Button inputHandler={inputHandler}>+</Button>
+          </div>
+          <div className={style.row}>
+            <Button inputHandler={inputHandler}>7</Button>
+            <Button inputHandler={inputHandler}>8</Button>
+            <Button inputHandler={inputHandler}>9</Button>
+            <Button inputHandler={inputHandler}>-</Button>
+          </div>
+          <div className={style.row}>
+            <Button inputHandler={inputHandler}>.</Button>
+            <Button inputHandler={inputHandler}>0</Button>
+            <span className={style.equal} onClick={calculate}>=</span>
+          </div>
+        </div>        
       </div>
-      <div>
-        <Input input={input} />
-      </div>
-      <div className={style.calbody}>       
-        <div className={style.row}>
-          <span className={style.ac} onClick={acHandler}>AC</span>
-          <span className={style.delete} onClick={()=>setInput('')}>DEL</span>
-          <Button inputHandler={inputHandler}>/</Button>
-        </div>
-        <div className={style.row}>
-          <Button inputHandler={inputHandler}>1</Button>
-          <Button inputHandler={inputHandler}>2</Button>
-          <Button inputHandler={inputHandler}>3</Button>
-          <Button inputHandler={inputHandler}>*</Button>
-        </div>
-        <div className={style.row}>
-          <Button inputHandler={inputHandler}>4</Button>
-          <Button inputHandler={inputHandler}>5</Button>
-          <Button inputHandler={inputHandler}>6</Button>
-          <Button inputHandler={inputHandler}>+</Button>
-        </div>
-        <div className={style.row}>
-          <Button inputHandler={inputHandler}>7</Button>
-          <Button inputHandler={inputHandler}>8</Button>
-          <Button inputHandler={inputHandler}>9</Button>
-          <Button inputHandler={inputHandler}>-</Button>
-        </div>
-        <div className={style.row}>
-          <Button inputHandler={inputHandler}>.</Button>
-          <Button inputHandler={inputHandler}>0</Button>
-          <span className={style.equal} onClick={calculate}>=</span>
-        </div>
-      </div>
-      <a className={style.git} href='https://github.com/MARTINANDRESCONTI/vite-calculator'><FaGithubSquare className={style.git}/></a>
+      <Footer />
     </div>
   )
 }
