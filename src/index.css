@@ -12,13 +12,9 @@
   --appVeige: #fef4e8;
   --appBrown: #D7C0AE;
   --appRed:   #a90041;
-  --appBlack: #100006; 
-  
+  --appBlack: #100006;   
 }
 
 body {
-  height: 100vh;
   background: linear-gradient(to bottom, var(--appBrown),white);
-  display: flex;
-  justify-content: center;
 }

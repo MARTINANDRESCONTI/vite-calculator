@@ -3,17 +3,17 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
 .appContainer {
-  height: 550px;
+  height: 100%;
   width: 400px; 
 }
 
 .titleContainer {
-  height: 40px;
+  height: 10%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -22,19 +22,28 @@
   font-weight: bold;
 }
 
+.titleContainer > h1{
+  font-size: 25px;
+  font-weight: 400;
+}
+
 .icon {  
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   background-color: white;
   border-radius: 50px;
 }
 
+.input {
+  height: 23%;
+  
+}
 .calbody {
-  height: 60%;  
+  height: 65%; 
 }
 
 .row {
-  height: 70px;
+  height: 20%;
   display: flex;  
 }
 
@@ -79,4 +88,10 @@ button {
   color: var(--appRed);    
 }
 
+@media screen and (max-width: 700px) {
+  .appContainer {
+    width: 300px;
+  }
+
+}
 

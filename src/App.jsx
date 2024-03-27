@@ -48,7 +48,7 @@ export default function App() {
             <img src={icon} />                 
           </a>
         </div>
-        <div>
+        <div className={style.input}>
           <Input input={input} />
         </div>
         <div className={style.calbody}>       
